@@ -60,3 +60,18 @@
   background: var(--desaturatedRed);
 }
 /* END SCROLLBAR */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight3);
+  color: var(--darkGrayishRed);
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
