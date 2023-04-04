@@ -20,12 +20,14 @@ Thanks for taking a look at my solution to this front-end coding challenge.
 
 ### Links
 
-- Solution URL: URL_REPO
+- Solution URL: https://github.com/Chermann-KING/base_apparel_coming_soon---NEWBIE
 - Live Site URL: URL_LIVE
 
 ### Built with
 
 - Semantic HTML5 markup
+- CSS custom properties
+- Mobile-first workflow
 
 ## Author
 

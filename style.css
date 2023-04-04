@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /* LAYOUT */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* COLORS */
+  /* Primary */
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  /* Neutral */
+  --darkGrayishRed: hsl(0, 6%, 24%);
+  /* Gradients */
+  --linearOne: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --linearTwo: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+  /* TYPOGRAPHY */
+  --fontFamily: "Josefin Sans", sans-serif;
+
+  --fontSize: 1rem;
+
+  --fontWeight3: 300;
+  --fontWeight4: 400;
+  --fontWeight6: 600;
+
+  /* SPACING & BORDER-RADIUS*/
+  --margin: 1rem;
+  --padding: 1rem;
+  --borderRadius: 1rem;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  display: none;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--desaturatedRed);
+  /* border-radius: 10px; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  width: 5px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--desaturatedRed);
+}
+/* END SCROLLBAR */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr min-content;
+  min-height: 100vh;
+
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight3);
+  color: var(--darkGrayishRed);
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.header {
+  height: 84px;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 calc(var(--padding) * 2);
+}
+
+main {
+  display: grid;
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 20px;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.hero-infos {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--padding) * 2);
+  align-items: center;
+  text-align: center;
+  margin-top: calc(var(--margin) * 2.5);
+}
+.hero-infos h1 {
+  font-size: calc(var(--fontSize) * 2.5);
+  color: var(--desaturatedRed);
+  text-transform: uppercase;
+  font-weight: var(--fontWeight3);
+  line-height: calc(var(--padding) * 2.625);
+  letter-spacing: calc(var(--padding) * 0.8);
+}
+.hero-infos h1 > span {
+  display: inline-block;
+  color: var(--darkGrayishRed);
+  font-weight: var(--fontWeight6);
+}
+.hero-infos p {
+  font-size: calc(var(--fontSize) * 0.875);
+  line-height: calc(var(--padding) * 1.375);
+  padding: 0 calc(var(--padding) * 1.3);
+}
+
+.hero-infos form {
+  width: 311px;
+  margin-right: calc(var(--margin) * 0.5);
+}
+.hero-infos form .input-container,
+.hero-infos form .input-container .input-wrap {
+  width: 100%;
+  display: flex;
+}
+.hero-infos form .input-container {
+  flex-direction: column;
+  position: relative;
+}
+.hero-infos form .input-container .input-wrap {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid hsl(0, 80%, 86%);
+  border-radius: calc(var(--borderRadius) * 1.75);
+}
+.hero-infos form .input-container .input-wrap input {
+  width: 70%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: calc(var(--borderRadius) * 1.75);
+  padding-left: calc(var(--padding) * 1.1);
+  padding-right: calc(var(--padding) * 0.5);
+  background-color: transparent;
+}
+::placeholder {
+  color: var(--desaturatedRed);
+}
+.hero-infos form .input-container .input-wrap img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.hero-infos form .input-container button {
+  cursor: pointer;
+  position: absolute;
+  right: calc(var(--margin) * -0.5);
+  border: none;
+  width: 64px;
+  height: 48px;
+  background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: calc(var(--borderRadius) * 1.75);
+  transition: all 0.2s ease;
+}
+.hero-infos form .input-container button:hover {
+  background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+  box-shadow: 0px 4px 8px 2px hsla(0, 80%, 86%, 0.75);
+}
+
+.hero-infos form .input-container .validation {
+  color: var(--softRed);
+  font-size: calc(var(--fontSize) * 0.8125);
+  font-weight: var(--fontWeight4);
+  text-align: left;
+  padding-left: calc(var(--padding) * 1.1);
+  margin-top: calc(var(--margin) * 0.6);
+}
+
+.footer {
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  padding: calc(var(--padding) * 3) calc(var(--padding) * 5);
+  line-height: calc(var(--padding) * 1.2);
+  font-size: calc(var(--fontSize) * 0.8);
+}
+.footer p a {
+  color: var(--blue);
+  font-weight: var(--fontWeight6);
+  transition: all 0.2s ease;
+}
+.footer p a:hover {
+  color: var(--darkBlue);
+}
+
+/* Display other than mobile phone */
+@media (min-width: 821px) {
+  .header {
+    position: absolute;
+
+    height: 163px;
+    padding-left: calc(var(--padding) * 10);
+  }
+
+  .hero {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-infos {
+    height: 404px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: left;
+    padding-left: calc(var(--padding) * 10);
+  }
+  .hero-infos h1,
+  .hero-infos p,
+  .hero-infos form {
+    width: 445px;
+  }
+  .hero-infos h1 {
+    font-size: calc(var(--fontSize) * 4);
+    line-height: calc(var(--padding) * 4.44);
+  }
+  .hero-infos p {
+    font-size: var(--fontSize);
+    line-height: calc(var(--padding) * 1.75);
+    padding: 0;
+  }
+  .hero-infos form .input-container {
+    width: 100%;
+  }
+  .hero-infos form .input-container button {
+    right: calc(var(--margin) * -0.5);
+    width: 100px;
+    height: 56px;
+  }
+  .hero-infos form .input-container .input-wrap {
+    width: 100%;
+    height: 56px;
+  }
+  .hero-infos form .input-container .input-wrap input {
+    padding-left: calc(var(--padding) * 1.8);
+  }
+
+  .hero-image {
+    height: 100%;
+    flex: 1;
+  }
+  .hero-image img {
+    height: 100%;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    text-align: left;
+    padding-left: calc(var(--padding) * 10);
+  }
+}
