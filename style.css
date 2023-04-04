@@ -29,3 +29,34 @@
   --padding: 1rem;
   --borderRadius: 1rem;
 }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  display: none;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--desaturatedRed);
+  /* border-radius: 10px; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  width: 5px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--desaturatedRed);
+}
+/* END SCROLLBAR */
