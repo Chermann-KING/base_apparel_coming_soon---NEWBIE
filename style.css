@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /* LAYOUT */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* COLORS */
+  /* Primary */
+  --desaturatedRed: hsl(0, 36%, 70%);
+  --softRed: hsl(0, 93%, 68%);
+  /* Neutral */
+  --darkGrayishRed: hsl(0, 6%, 24%);
+  /* Gradients */
+  --linearOne: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --linearTwo: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+  /* TYPOGRAPHY */
+  --fontFamily: "Josefin Sans", sans-serif;
+
+  --fontSize: 1rem;
+
+  --fontWeight3: 300;
+  --fontWeight4: 400;
+  --fontWeight6: 600;
+
+  /* SPACING & BORDER-RADIUS*/
+  --margin: 1rem;
+  --padding: 1rem;
+  --borderRadius: 1rem;
+}
