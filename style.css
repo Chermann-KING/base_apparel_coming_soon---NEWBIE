@@ -63,7 +63,7 @@
 body {
   display: grid;
   grid-template-rows: auto 1fr min-content;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 
   font-family: var(--fontFamily);
   font-size: var(--fontSize);
@@ -107,9 +107,10 @@ main {
 .hero-infos {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: calc(var(--padding) * 2);
   align-items: center;
   text-align: center;
+  margin-top: calc(var(--margin) * 2.5);
 }
 .hero-infos h1 {
   font-size: calc(var(--fontSize) * 2.5);
