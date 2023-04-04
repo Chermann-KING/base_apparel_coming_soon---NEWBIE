@@ -16,7 +16,7 @@ Thanks for taking a look at my solution to this front-end coding challenge.
 
 ### Screenshot
 
-![]()
+![](./images/base-apparel-coming-soon-page-printscreen.png)
 
 ### Links
 
