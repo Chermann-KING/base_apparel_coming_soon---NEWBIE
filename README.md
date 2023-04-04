@@ -21,7 +21,7 @@ Thanks for taking a look at my solution to this front-end coding challenge.
 ### Links
 
 - Solution URL: https://github.com/Chermann-KING/base_apparel_coming_soon---NEWBIE
-- Live Site URL: URL_LIVE
+- Live Site URL: https://chermann-king.github.io/base_apparel_coming_soon---NEWBIE/
 
 ### Built with
 
