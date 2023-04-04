@@ -22,12 +22,29 @@
         <img src="./images/hero-mobile.jpg" alt="hero-mobile" aria-hidden="true">
       </picture>
 
-      We're coming soon
+      <div class="hero-infos">
+        <h1>We're <span>coming soon</span></h1>
 
-      Hello fellow shoppers! We're currently building our new fashion store.
-      Add your email below to stay up-to-date with announcements and our launch deals.
+        <p>Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      Email Address
+        <form action="#">
+
+          <div class="input-container">
+            <div class="input-wrap">
+              <input type="email" id="email" aria-label="Email Address" placeholder="Email Address">
+              <!-- Error Icon -->
+              <img src="./images/icon-error.svg" alt="icon-error" aria-hidden="true">
+            </div>
+            <!-- Submit button -->
+            <button><img src="./images/icon-arrow.svg" alt="icon-arrow" aria-hidden="true"></button>
+            <!-- Validation text -->
+            <span class="validation" id="error-email"></span>
+          </div>
+
+        </form>
+
+      </div>
     </div>
   </main>
 
