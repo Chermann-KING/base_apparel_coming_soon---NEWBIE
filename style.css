@@ -62,8 +62,8 @@
 /* END SCROLLBAR */
 body {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  grid-template-rows: auto 1fr min-content;
+  /* min-height: 100vh; */
 
   font-family: var(--fontFamily);
   font-size: var(--fontSize);
@@ -182,7 +182,6 @@ main {
   transition: all 0.2s ease;
 }
 .hero-infos form .input-container button:hover {
-  /*  */
   background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
   box-shadow: 0px 4px 8px 2px hsla(0, 80%, 86%, 0.75);
 }
@@ -194,4 +193,21 @@ main {
   text-align: left;
   padding-left: calc(var(--padding) * 1.1);
   margin-top: calc(var(--margin) * 0.6);
+}
+
+.footer {
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  padding: calc(var(--padding) * 3) calc(var(--padding) * 5);
+  line-height: calc(var(--padding) * 1.2);
+  font-size: calc(var(--fontSize) * 0.8);
+}
+.footer p a {
+  color: var(--blue);
+  font-weight: var(--fontWeight6);
+  transition: all 0.2s ease;
+}
+.footer p a:hover {
+  color: var(--darkBlue);
 }
